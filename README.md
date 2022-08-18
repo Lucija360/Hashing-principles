@@ -50,11 +50,43 @@ public class interviewBit {
  #### Output:
  
  ```{null=InterviewBit, 1=Program to store null value}```
-
  
+ #### In which order mappings are stored in HashMap?
+
+- Random order because HashMap doesn't provide any ordering guarantee for keys, values, or entries. When you iterate over a HashMap, you may get a different order every time you iterate over it.
+
+
 ## Important Questions
 
-hhbhbh
+#### What happens if you try to store a duplicate key in the HashMap?
+
+- If you try to store a duplicate key in the HashMap, it overrides the old value with the new value. When storing a key that's already present in the HashMap, the HashMap size stays the same and doesn't throw error or exception. This is why all keys return Set instead of Collection when you call the keySet() method on HashMap since Set doesn't allow for duplicates.
+
+#### What's the difference between HashMap and ConcurrentHashMap in Java?
+
+- One of the biggest differences between HashMap and ConcurrentHashMap is that ConcurrentHashMap is thread-safe, whereas HashMap isn't. ConcurrentHashMap also doesn't allow keys to contain null values and HashMap can contain one null key.
+
+#### What factors would you use to measure the performance of HashMap?
+
+- To measure the performance of HashMap, I would look at the load factor and capacity. Load factor lets me know how full the hash table can get before its capacity automatically increases. The hash table gets rehashed when the number of entries exceeds the load factor allowing the hash table to have approximately twice the number of buckets. Capacity lets me know the number of buckets in the hash table.
+
+
+#### Can you sort HashMap in Java?
+
+- No, you cannot sort a HashMap because, unlike List, it is not an ordered collection. Albeit, you can sort contents of HashMap by keys, values, or by entries by sorting and then storing the result into an ordered map like LinkedHashMap or a sorted map e.g., TreeMap.
+
+Read more: https://www.java67.com/2017/08/top-10-java-hashmap-interview-questions.html#ixzz7cIwWFbdw
+
+
+#### What is a collision in HashMap? How can you resolve these?
+
+- A collision in HashMap is when two distinct keys generate the same hashCode() value. When multiple collisions often result from a bad hashCode() algorithm. These can lead to a poor performance of the HashMap. To eliminate collisions, I would apply the chaining strategy, which chains items together, similar to a linked list.
+
+
+#### Can you store a duplicate key in HashMap?
+
+- No, you cannot insert duplicate keys in HashMap, it doesn't allow duplicate keys. If you try to insert an existing key with the new or same value, then it will override the old value, but the size of HashMap will not change i.e., it will remain the same. This is one of the reasons when you get all keys from the HashMap by calling keySet(). It returns a Set, not a Collection because Set doesn't allow duplicates.
+
 
 ## Sections
 
