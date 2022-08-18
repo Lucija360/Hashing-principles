@@ -75,7 +75,7 @@ public class interviewBit {
 
 - No, you cannot sort a HashMap because, unlike List, it is not an ordered collection. Albeit, you can sort contents of HashMap by keys, values, or by entries by sorting and then storing the result into an ordered map like LinkedHashMap or a sorted map e.g., TreeMap.
 
-Read more: https://www.java67.com/2017/08/top-10-java-hashmap-interview-questions.html#ixzz7cIwWFbdw
+
 
 
 #### What is a collision in HashMap? How can you resolve these?
